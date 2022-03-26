@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+        //eliminamos el debug de arriba
+        debugShowCheckedModeBanner: false,
         //creamos el home
-        //hacemos wrap with centre en el text para meterlo dentro del Center
-        home: Center(
-      //le ponemos un text simple
-      child: Text('Hola Mundo'),
-    ));
+        home: HomeScreen());
   }
 }
