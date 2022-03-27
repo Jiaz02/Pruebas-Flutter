@@ -5,6 +5,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //hacemos una variable guardar el stilo
+    const TextStyle fontSize30 = TextStyle(fontSize: 30);
+    const TextStyle fontSize20 = TextStyle(fontSize: 20);
     //creamos un scaffold
     return Scaffold(
       //creamos un appbar de un tamaño x
@@ -24,7 +27,11 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           //centramos la columna con CrossAxisAlignment en eje x respecto al item mas grande
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const <Widget>[Text('Contador de clicks'), Text('10')],
+          children: const <Widget>[
+            //cambiamos las propiedades del texto
+            Text('Contador de clicks', style: fontSize30),
+            Text('10', style: fontSize20)
+          ],
         ),
       ),
     );
