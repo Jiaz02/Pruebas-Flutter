@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class CounterScreen extends StatefulWidget {
+  const CounterScreen({Key? key}) : super(key: key);
+
+  @override
+  State<CounterScreen> createState() => _CounterScreenState();
+}
+
+class _CounterScreenState extends State<CounterScreen> {
+//creamos el contador como una propiedad
+  int num = 0;
 
   @override
   Widget build(BuildContext context) {
     //hacemos una variable guardar el stilo
     const TextStyle fontSize30 = TextStyle(fontSize: 30);
     const TextStyle fontSize20 = TextStyle(fontSize: 20);
-
-    int num = 0;
 
     //creamos un scaffold
     return Scaffold(
@@ -18,7 +24,7 @@ class HomeScreen extends StatelessWidget {
         //color del appbar
         backgroundColor: Colors.green,
         //texto del appbar
-        title: const Center(child: Text('Holis')),
+        title: const Center(child: Text('Contador')),
         //sombrita de abajo
         elevation: 10.0,
       ),
@@ -48,6 +54,8 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
           num++;
           print(num);
+          //actualizamos la ventana
+          setState(() {});
         },
       ),
     );
