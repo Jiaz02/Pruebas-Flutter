@@ -1,3 +1,4 @@
+import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/screens/screens.dart';
@@ -10,20 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      initialRoute: 'home',
-      //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
-      routes: {
-        'listview1': (BuildContext context) => const ListView1Screen(),
-        'listview2': (BuildContext context) => const ListView2Screen(),
-        'home': (BuildContext context) => const HomeScreen(),
-        'alert': (BuildContext context) => const AlertScreen(),
-        'card': (BuildContext context) => const CardScreen(),
-      },
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(builder: (context) => const AlertScreen());
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        //llamamos a la primera pantalla
+        initialRoute: AppRoutes.initialRoute,
+        //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
+        routes: AppRoutes.routes,
+        onGenerateRoute: AppRoutes.onGenerateRoute);
   }
 }
