@@ -44,19 +44,57 @@ class _CounterScreenState extends State<CounterScreen> {
         ),
       ),
       //asignamos la ubicacion del floating action button
-      // floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterFloat,
       //creamos el floating action button
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purple,
-        elevation: 10.0,
-        child: const Icon(Icons.add),
-        //cuando lo pretamos
-        onPressed: () {
-          num++;
-          print(num);
-          //actualizamos la ventana
-          setState(() {});
-        },
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FloatingActionButton(
+            backgroundColor: Colors.purple,
+            elevation: 10.0,
+            child: const Icon(Icons.add),
+            //cuando lo pretamos
+            onPressed: () {
+              num++;
+              print(num);
+              //actualizamos la ventana
+              setState(() {});
+            },
+          ),
+          //hacemos una separacion
+          const SizedBox(
+            width: 20,
+          ),
+          FloatingActionButton(
+            backgroundColor: Colors.purple,
+            elevation: 10.0,
+            child: const Icon(Icons.restart_alt_outlined),
+            //cuando lo pretamos
+            onPressed: () {
+              num = 0;
+              print(num);
+              //actualizamos la ventana
+              setState(() {});
+            },
+          ),
+          //hacemos una separacion
+          const SizedBox(
+            width: 20,
+          ),
+          FloatingActionButton(
+            backgroundColor: Colors.purple,
+            elevation: 10.0,
+            child: const Icon(Icons.remove),
+            //cuando lo pretamos
+            onPressed: () {
+              num--;
+              print(num);
+              //actualizamos la ventana
+              setState(() {});
+            },
+          ),
+        ],
       ),
     );
   }
