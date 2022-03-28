@@ -38,8 +38,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       //asignamos la ubicacion del floating action button
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterFloat,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterFloat,
       //creamos el floating action button
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.purple,
