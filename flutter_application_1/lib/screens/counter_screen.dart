@@ -11,6 +11,7 @@ class _CounterScreenState extends State<CounterScreen> {
 //creamos el contador como una propiedad
   int num = 0;
 
+//creamos los cambios de estado
   void increase() {
     num++;
     setState(() {});
@@ -72,12 +73,14 @@ class _CounterScreenState extends State<CounterScreen> {
 }
 
 class CustomFloatingActions extends StatelessWidget {
+  //creamos las funciones
   final Function increaseFn;
   final Function decreaseFn;
   final Function resetFn;
 
   const CustomFloatingActions({
     Key? key,
+    //pedimos las funciones en el constructor
     required this.increaseFn,
     required this.decreaseFn,
     required this.resetFn,
