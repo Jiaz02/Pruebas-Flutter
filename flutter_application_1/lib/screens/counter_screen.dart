@@ -48,7 +48,8 @@ class _CounterScreenState extends State<CounterScreen> {
           FloatingActionButtonLocation.miniCenterFloat,
       //creamos el floating action button
       floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        //centramos los botones con el main axis aligment
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           FloatingActionButton(
             backgroundColor: Colors.purple,
@@ -62,10 +63,6 @@ class _CounterScreenState extends State<CounterScreen> {
               setState(() {});
             },
           ),
-          //hacemos una separacion
-          const SizedBox(
-            width: 20,
-          ),
           FloatingActionButton(
             backgroundColor: Colors.purple,
             elevation: 10.0,
@@ -77,10 +74,6 @@ class _CounterScreenState extends State<CounterScreen> {
               //actualizamos la ventana
               setState(() {});
             },
-          ),
-          //hacemos una separacion
-          const SizedBox(
-            width: 20,
           ),
           FloatingActionButton(
             backgroundColor: Colors.purple,
