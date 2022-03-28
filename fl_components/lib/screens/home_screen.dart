@@ -5,10 +5,27 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('HomeScreen'),
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          title: const Text('Componentes en flutter'),
+        ),
+        body: ListView.separated(
+            itemBuilder: (context, index) => ListTile(
+                  title: const Text('Nombre de ruta'),
+                  leading: const Icon(Icons.chair),
+                  onTap: () {
+                    //definimos una ruta
+                    // final route = MaterialPageRoute(
+                    //     builder: (context) => const ListView1Screen());
+
+                    //llamamos a otra pantalla
+                    // Navigator.push(context, route);
+
+                    Navigator.pushNamed(context, 'alert');
+                  },
+                ),
+            separatorBuilder: (context, index) => const Divider(),
+            itemCount: 10));
   }
 }

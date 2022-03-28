@@ -10,16 +10,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Material App',
-        initialRoute: 'home',
-        //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
-        routes: {
-          'listview1': (BuildContext context) => const ListView1Screen(),
-          'listview2': (BuildContext context) => const ListView2Screen(),
-          'home': (BuildContext context) => const HomeScreen(),
-          'alert': (BuildContext context) => const AlertScreen(),
-          'card': (BuildContext context) => const CardScreen(),
-        });
+      debugShowCheckedModeBanner: false,
+      title: 'Material App',
+      initialRoute: 'home',
+      //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
+      routes: {
+        'listview1': (BuildContext context) => const ListView1Screen(),
+        'listview2': (BuildContext context) => const ListView2Screen(),
+        'home': (BuildContext context) => const HomeScreen(),
+        'alert': (BuildContext context) => const AlertScreen(),
+        'card': (BuildContext context) => const CardScreen(),
+      },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => const AlertScreen());
+      },
+    );
   }
 }
