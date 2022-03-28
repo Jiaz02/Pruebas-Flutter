@@ -19,8 +19,8 @@ class ListView2Screen extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(
             leading: const Icon(Icons.airline_seat_legroom_reduced),
             title: Text(options[index]),
-            trailing: const Icon(Icons.arrow_forward_ios_rounded,
-                color: Colors.green[400]),
+            trailing:
+                Icon(Icons.arrow_forward_ios_rounded, color: Colors.green[400]),
             //hacemos que algo pase si se toca
             onTap: () {},
           ),
