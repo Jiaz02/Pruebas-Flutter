@@ -5,11 +5,11 @@ class MenuOption {
   final String route;
   final IconData icon;
   final String name;
-  final Widget scrren;
+  final Widget screen;
 
   MenuOption(
       {required this.route,
       required this.icon,
       required this.name,
-      required this.scrren});
+      required this.screen});
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:fl_components/router/app_routes.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -12,8 +14,8 @@ class HomeScreen extends StatelessWidget {
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  title: const Text('Nombre de ruta'),
-                  leading: const Icon(Icons.chair),
+                  title: Text(AppRoutes.menuOption[index].name),
+                  leading: Icon(AppRoutes.menuOption[index].icon),
                   onTap: () {
                     //definimos una ruta
                     // final route = MaterialPageRoute(
@@ -22,10 +24,11 @@ class HomeScreen extends StatelessWidget {
                     //llamamos a otra pantalla
                     // Navigator.push(context, route);
 
-                    Navigator.pushNamed(context, 'alert');
+                    Navigator.pushNamed(
+                        context, AppRoutes.menuOption[index].route);
                   },
                 ),
             separatorBuilder: (context, index) => const Divider(),
-            itemCount: 10));
+            itemCount: AppRoutes.menuOption.length));
   }
 }

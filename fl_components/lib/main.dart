@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         //llamamos a la primera pantalla
         initialRoute: AppRoutes.initialRoute,
         //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
-        routes: AppRoutes.routes,
+        routes: AppRoutes.getAppRoutes(),
         onGenerateRoute: AppRoutes.onGenerateRoute);
   }
 }
