@@ -7,15 +7,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var green = Colors.green[400];
+
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: green,
           elevation: 0,
           title: const Text('Componentes en flutter'),
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
+                  //sacamos los datos del menu option que esta en approutes
                   title: Text(AppRoutes.menuOption[index].name),
-                  leading: Icon(AppRoutes.menuOption[index].icon),
+                  leading: Icon(
+                    AppRoutes.menuOption[index].icon,
+                    color: green,
+                  ),
                   onTap: () {
                     //definimos una ruta
                     // final route = MaterialPageRoute(
