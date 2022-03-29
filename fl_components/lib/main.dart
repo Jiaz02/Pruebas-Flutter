@@ -1,4 +1,5 @@
 import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/screens/screens.dart';
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
         initialRoute: AppRoutes.initialRoute,
         //creamos las rutas, nombre que le queremos poner y luego el nombre de la clase
         routes: AppRoutes.getAppRoutes(),
-        onGenerateRoute: AppRoutes.onGenerateRoute);
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        //personalizamos el theme
+        theme: AppTheme.lightTheme);
   }
 }

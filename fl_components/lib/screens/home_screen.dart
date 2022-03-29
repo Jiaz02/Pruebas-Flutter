@@ -1,3 +1,4 @@
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fl_components/router/app_routes.dart';
@@ -7,12 +8,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var green = Colors.green[400];
-
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: green,
-          elevation: 0,
           title: const Text('Componentes en flutter'),
         ),
         body: ListView.separated(
@@ -21,7 +18,7 @@ class HomeScreen extends StatelessWidget {
                   title: Text(AppRoutes.menuOption[index].name),
                   leading: Icon(
                     AppRoutes.menuOption[index].icon,
-                    color: green,
+                    color: AppTheme.primary,
                   ),
                   onTap: () {
                     //definimos una ruta

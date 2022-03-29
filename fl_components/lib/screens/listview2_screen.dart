@@ -1,3 +1,4 @@
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class ListView2Screen extends StatelessWidget {
@@ -10,17 +11,16 @@ class ListView2Screen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('ListView tipo 2'),
-          elevation: 0,
-          backgroundColor: Colors.green[400],
         ),
         //creamos un list view
         body: ListView.separated(
           itemCount: options.length,
           itemBuilder: (context, index) => ListTile(
-            leading: const Icon(Icons.airline_seat_legroom_reduced),
+            leading: const Icon(Icons.airline_seat_legroom_reduced,
+                color: AppTheme.primary),
             title: Text(options[index]),
-            trailing:
-                Icon(Icons.arrow_forward_ios_rounded, color: Colors.green[400]),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded,
+                color: AppTheme.primary),
             //hacemos que algo pase si se toca
             onTap: () {},
           ),
