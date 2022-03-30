@@ -1,8 +1,7 @@
-import 'package:fl_components/router/app_routes.dart';
-import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
-import 'package:fl_components/screens/screens.dart';
+import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 
 void main() => runApp(const MyApp());
 
