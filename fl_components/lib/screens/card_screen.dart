@@ -21,7 +21,23 @@ class CardScreen extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            CustomCardType2(),
+            CustomCardType2(
+                //mandamos el nombre si lo tenemos y la direccion de la imagen
+                name: 'Tremendo paisajito',
+                imageUrl:
+                    'https://mymodernmet.com/wp/wp-content/uploads/2020/11/International-Landscape-Photographer-Year-PhotographER-1st-KelvinYuen-2.jpg'),
+            SizedBox(
+              height: 10,
+            ),
+            CustomCardType2(
+                imageUrl:
+                    'https://mymodernmet.com/wp/wp-content/uploads/2020/02/Landscape-Photographer-of-the-Year-Sander-Grefte.jpg'),
+            SizedBox(
+              height: 10,
+            ),
+            CustomCardType2(
+                imageUrl:
+                    'https://www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg'),
             SizedBox(
               height: 100,
             ),
